@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Moje hobby</title>
+    <meta name="description" content="Jest to strona o moim hobby, którym jest piłka nożna" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery/jquery-ui.css" />
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script src="local_storage.js"></script>
+    <script src="nowy_element.js"></script>
+    <script src="session_storage.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#button').css('display', 'block');
+
+        });
+    </script>
+</head>
+<body onload="znajdz(), znajdz2()" >
+    <div id="container">
+        <div id="header">
+            Moje hobby - piłka nożna
+
+        </div>
+        <div id="menu">
+            <ol>
+                <li><a href="index.html" class="podstrona">Strona główna</a></li>
+                <li><a href="zasady.html" class="podstrona">Zasady piłki nożnej</a>
+                <li>
+                    <a href="galeria.html" class="podstrona">Multimedia</a>
+                    <ul>
+                        <li><a href="galeria.html">Galeria zdjęć</a></li>
+                        <li><a href="animacja.html">Animacja</a></li>
+                        <li><a href="http://www.fifa.com/">Strona FIFA</a></li>
+                        <li><a href="http://ekstraklasa.tv/">Strona Ekstraklasy</a></li>
+                        <li><a href="http://www.przegladsportowy.pl/">Strona PS</a></li>
+
+                    </ul>
+
+                </li>
+                <li><a href="kontakt.html" class="podstrona">Kontakt</a></li>
+                
+
+
+            </ol>
+        </div>
+        <div style="clear:both;"></div>
+    <div id="content">
+        <h3>Proszę wprowadzić swoje dane</h3>
+        <br/><br />
+        <form action="mailto:ziutekkowalski30@gmail.com">
+<label>Imię: <input name="imie" /></label>
+            <br/><br />
+            <label>Nazwisko: <input name="nazwisko" /></label>
+            <br /><br />
+            <label>Email: <input type="email" /></label>
+            <br /><br />
+            <label>Hasło: <input type="password"/></label>
+            <br/>
+           
+            <br/>
+            <div id="numer_tel"></div>
+            <br/>
+            Płeć: <br /><br/>
+            <label>Mężczyzna<input type="radio" name="sex" /></label>
+            <label>Kobieta<input type="radio" name="sex" /></label>
+            <br /><br />
+            <label><input type="checkbox" name="sport" />Uprawiam sport codziennie</label>
+            <label><input type="checkbox" name="sport" />Uprawiam sport raz w tygodniu</label>
+            <label><input type="checkbox" name="sport" />Nie uprawiam sportu</label>
+            <br/><br/>
+            <div id="button">
+               <h1> Dostosuj swoją stronę!</h1>
+                <br />
+                <select id="dostosuj">
+                    <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                    <option value="Lucida Sans">Lucida Sans</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+
+                <input type="button" onclick="podmiana()" value="Zmiana czcionki" />
+                <br /><br />
+                <select id="dostosuj_naglowek">
+                    <option value="green">Zielony</option>
+                    <option value="white">Biały</option>
+                    <option value="blue">Niebieski</option>
+                </select>
+                <input type="button" onclick="podmiana2()" value="Zmiana koloru nagłówka" />
+                <br /><br />
+                <input onclick="nowy()" type="button" value="Kliknij,aby wyświetlić numer telefonu" />
+                <br />
+                <p>Data: <input type="text" id="datepicker"></p>
+            </div>
+            <br /><br />
+            
+            <textarea name="message" style="width: 365px; height: 132px">Wpisz treść wiadomości</textarea>
+            <input type="submit" value="Wyślij"  />   <input type="reset" value="Wyczyść"/>
+           
+        </form>
+        
+        <br /><br />
+        <div id="footer">
+            2017 Jakub Włostowski  Projekt strony HTML
+        </div>
+
+    </div>
+        </div>
+</body>
+</html>

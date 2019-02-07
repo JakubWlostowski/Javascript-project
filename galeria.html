@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Moje hobby</title>
+    <meta name="description" content="Jest to strona o moim hobby, którym jest piłka nożna" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="imagemenu.js"> </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#para td").mouseover(function () {
+                var idd = $(this).attr('id');
+                enlargeimg(idd);
+            });
+            $("#para td").mouseout(function () {
+                actualimg();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#button').css('display', 'block');
+
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            Moje hobby - piłka nożna
+            
+        </div>
+        <div id="menu">
+            <ol>
+                <li ><a href="index.html" class="podstrona">Strona główna</a></li>
+                <li ><a href="zasady.html" class="podstrona">Zasady piłki nożnej</a>
+                <li ><a href="galeria.html" class="podstrona">Multimedia</a>
+                 <ul>
+                     <li><a href="galeria.html">Galeria zdjęć</a></li>
+                     <li><a href="animacja.html">Animacja</a></li>
+                     <li><a href="http://www.fifa.com/">Strona FIFA</a></li>
+                     <li><a href="http://ekstraklasa.tv/">Strona Ekstraklasy</a></li>
+                     <li><a href="http://www.przegladsportowy.pl/">Strona PS</a></li>
+
+                 </ul>   
+
+                </li>
+                <li><a href="kontakt.html" class="podstrona">Kontakt</a></li>
+                
+
+
+            </ol>
+        </div>
+        <br /><br />
+        <div id="content">
+            <h4>Najedź na zdjęcie, aby rozwinąć</h4>
+            
+               
+            <div id="button">
+                <table width="5000" id="para">
+                    <tr>
+                        <td class="imgmenu" align="center" style="background:url(lechia.jpg) repeat scroll 0%; " id="img1"><a href='http://lechia.pl/'>Lechia</a></td>
+                        <td class="imgmenu" align=center style=" background:url(legia.jpg) repeat scroll 0%;" id="img2"><a href='http://legia.com/'>Legia</a></td>
+                        <td class="imgmenu" align=center style=" background:url(arsenal.jpg) repeat scroll 0%; " id="img3"><a href='https://www.arsenal.com/'>Arsenal</a></td>
+                        <td class="imgmenu" align=center style=" background:url(bayern.jpg) repeat scroll 0%; " id="img4"><a href='https://fcbayern.com/en'>Bayern</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan=3>
+                            <div align=center style="font-size: 10px; color: #dadada;" id="dumdiv">
+                                <a href="http://www.hscripts.com" id="dum" style="text-decoration:none; color: #3d366f;">&copy;h</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br/><br/>
+            <div id="footer">
+                2017 Jakub Włostowski  Projekt strony HTML
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>
